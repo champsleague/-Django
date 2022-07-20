@@ -1,18 +1,30 @@
 from django.shortcuts import render,HttpResponse
 import random
 
+topics = [
+    {'id':1, 'title':'routing', 'body':'Routing is...'},
+    {'id':2, 'title':'view', 'body':'View is...'},
+    {'id':3, 'title':'model', 'body':'Model is...'},
+    ]
+
 # Create your views here.
 def index(request):
-    return HttpResponse('''
+    global topics
+    ol = ''
+    for topic in topics:
+        ol += f'<li><a href="/read/{topic["id"]}">{topic["title"]}</a></li>'
+    return HttpResponse(f'''
+        <html>
+        <body>
         <h1>Django</h1>
         <ol>
-        <li>routing</li>
-        <li>view</li>
-        <li>model</li>
+            {ol}
         </ol>
         
-        <h2>welcome</h2>
+        <h2>Welcome</h2>
         hello,django
+        </body>
+        </html>
                         ''')
 
 def create(request):
