@@ -3,7 +3,7 @@ import random
 
 # Create your views here.
 def index(request):
-    return HttpResponse('<h1>Random</h1>'+random.random)
+    return HttpResponse('<h1>Random</h1>'+str(random.random()))
 
 def create(request):
     return HttpResponse('create')
