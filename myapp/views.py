@@ -16,9 +16,9 @@ def HTMLTemplate(articleTag):
         <html>
         <body>
         <h1>Django</h1>
-        <ol>
+        <ul>
             {ol}
-        </ol>
+        </ul>
         {articleTag}
         </body>
         </html>
