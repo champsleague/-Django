@@ -20,6 +20,7 @@ def HTMLTemplate(articleTag):
             {ol}
         </ul>
         {articleTag}
+        <a href="/create">create</a>
         </body>
         </html>
                         '''
