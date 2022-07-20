@@ -46,7 +46,7 @@ def create(request):
     '''
     return HttpResponse(HTMLTemplate(article))
 
-# 
+
 
 def read(request,id):
     global topics 
