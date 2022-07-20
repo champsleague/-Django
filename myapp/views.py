@@ -7,7 +7,7 @@ topics = [
     {'id':3, 'title':'model', 'body':'Model is...'},
     ]
 
-def HTMLTemplate():
+def HTMLTemplate(articleTag):
     global topics
     ol = ''
     for topic in topics:
@@ -19,20 +19,26 @@ def HTMLTemplate():
         <ol>
             {ol}
         </ol>
-        
-        <h2>Welcome</h2>
-        hello,django
+        {articleTag}
         </body>
         </html>
                         '''
 
 
 def index(request):
-
-    return HttpResponse(HTMLTemplate())
+    article = ''' 
+    <h2>Welcome</h2>
+    hello,django
+    '''
+    return HttpResponse(HTMLTemplate(article))
 
 def create(request):
     return HttpResponse('create')
 
 def read(request,id):
-    return HttpResponse('read'+id)
+    global topics 
+    article=''
+    for topic in topics:
+        if topic['id'] ==int(id):
+            article=f'<h2>{topic["title"]}</h2>{topic["body"]}'
+    return HttpResponse(HTMLTemplate(article))
