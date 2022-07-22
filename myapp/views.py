@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse,redirect
-import random
+from django.views.decorators.csrf import csrf_exempt
 
 nextId = 4
 topics = [
@@ -43,12 +43,12 @@ def index(request):
     return HttpResponse(HTMLTemplate(article))
 
 
+@csrf_exempt
 def create(request):
     global nextId
-    print('request.method',request.method)
     if request.method == 'GET':
         article='''
-        <form action="/create">
+        <form action="/create/" method="post">
             <p><input type="text" name="title" placeholder="title"></p>
             <p><textarea name="body" placeholder="body"></textarea></p>
             <p><input type="submit"></p>
@@ -63,7 +63,7 @@ def create(request):
         topics.append(newTopic)
         url='/read/'+str(nextId)
         nextId = nextId + 1
-        return redirect()
+        return redirect(url)
 
 
 def read(request,id):
@@ -72,4 +72,17 @@ def read(request,id):
     for topic in topics:
         if topic['id'] ==int(id):
             article=f'<h2>{topic["title"]}</h2>{topic["body"]}'
-    return HttpResponse(HTMLTemplate(article))
+    return HttpResponse(HTMLTemplate(article,id))
+
+
+@csrf_exempt
+def delete(request):
+    global topics
+    if request.method == 'POST':
+        id=request.POST['id']
+        newTopics=[]
+        for topic in topics:
+            if topic['id'] != int(id):
+                newTopics.append(topic)
+        topics = newTopics
+        return redirect('/')
