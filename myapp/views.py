@@ -96,7 +96,7 @@ def update(request,id):
                     "body":topic['body']
                     }
         article=f'''
-        <form action="/update/{id}" method="post">
+        <form action="/update/{id}/" method="post">
             <p><input type="text" name="title" placeholder="title" value={selectedTopic["title"]}></p>
             <p><textarea name="body" placeholder="body">{selectedTopic['body']}</textarea></p>
             <p><input type="submit"></p>
@@ -104,6 +104,12 @@ def update(request,id):
         '''
         return HttpResponse(HTMLTemplate(article,id))
     elif request.method == 'POST':
+        title = request.POST['title']
+        body = request.POST['body']
+        for topic in topics:
+            if topic['id'] == int(id):
+                topic['title'] = title
+                topic['body'] = body
         return redirect(f'/read/{id}')
 
 # DELETE
