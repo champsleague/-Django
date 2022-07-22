@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,redirect
 import random
 
 nextId = 4
@@ -54,9 +54,10 @@ def create(request):
         title = request.POST['title']
         body = request.POST['body']
         newTopic = {"id":nextId,"title":title,"body":body}
-        nextId = nextId + 1
         topics.append(newTopic)
-        return HttpResponse(HTMLTemplate('AAA'))
+        url='/read/'+str(nextId)
+        nextId = nextId + 1
+        return redirect()
 
 
 def read(request,id):
