@@ -54,8 +54,9 @@ def create(request):
         title = request.POST['title']
         body = request.POST['body']
         newTopic = {"id":nextId,"title":title,"body":body}
+        nextId = nextId + 1
         topics.append(newTopic)
-        return HttpResponse(request.POST['title'])
+        return HttpResponse(HTMLTemplate('AAA'))
 
 
 def read(request,id):
