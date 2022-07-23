@@ -1,0 +1,5 @@
+MVC & MTV
+
+Model - 안전하게 데이터를 저장
+View - 데이터를 적절하게 유저에게 보여줌
+Control / Template - 사용자의 입력과 이벤트에 반응해 model과 view를 업데이트
