@@ -3,3 +3,22 @@ MVC & MTV
 Model - 안전하게 데이터를 저장
 View - 데이터를 적절하게 유저에게 보여줌
 Control / Template - 사용자의 입력과 이벤트에 반응해 model과 view를 업데이트
+
+            web browser
+    caching            url 
+    framework          dispatcher
+              template
+              View
+              model
+              database
+
+
+settings.py
+프로젝트 환경 설정 파일
+
+debug               디버그 모드 설정
+installed_apps      pip로 설치한 앱 또는 본인이 만든 app을 추가
+middleware_classes  req, res 사이의 주요 기능 레이어
+templates           django template 관련 설정, 실제 뷰(html,변수)
+databases           데이터베이스 엔진의 연결 설정
+static_URL          정적 파일의 URL(css, js, img, etc)
