@@ -73,6 +73,7 @@ def create(request):
         return redirect(url)
 
 
+
 # READ
 def read(request,id):
     global topics 
