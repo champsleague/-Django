@@ -4,8 +4,6 @@ import os
 import sys
 
 
-
-
 def main():
     """Run administrative tasks."""
 <<<<<<< HEAD
@@ -25,9 +23,13 @@ def main():
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 4dd70a6 (first commit)
+=======
+# 
+>>>>>>> 36c6261 (update)
 if __name__ == '__main__':
     main()
