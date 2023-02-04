@@ -14,9 +14,12 @@ window.initMap = function(){
         { label: "F", name: "Five Guys", lat: 33.7567961, lng: -117.9408495 },
       ];  
 
+    // control map size according to the label
     const bounds = new google.maps.LatLngBounds();
     const infoWindow = new google.maps.InfoWindow();
 
+
+    // show all markers (burgers)
     burgers.forEach(({label,name, lat,lng})=>{
        const marker =  new google.maps.Marker({
             position: {lat, lng},
@@ -25,10 +28,11 @@ window.initMap = function(){
         })
         bounds.extend(marker.position);
 
+        // changes position when clicked
         marker.addListener("click",()=>{
-            // changes position when clicked
             map.panTo(marker.position)
-            
+
+            // show info when clicked
             infoWindow.setContent(name);
             infoWindow.open({
                 anchor: marker,
