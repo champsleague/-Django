@@ -1,0 +1,61 @@
+7 integers according to the calories
+
+[                                               name  Calories (kcal)
+ 32          bacon             8.98
+ 23        peanuts             5.67
+ 48  chocolate bar             5.18
+ 39        popcorn             5.00
+ 46         cookie             4.97
+ 45       doughnut             4.17
+ 40  rice crackers             4.16
+ 26      croissant             4.06
+ 49          candy             3.94,             name  Calories (kcal)
+ 29        cheese             3.93
+ 47          cake             3.71
+ 34  french fries             3.12
+ 43  fried shrimp             3.08
+ 51         honey             3.04
+ 25         bread             2.74
+ 27  french bread             2.72
+ 35         pizza             2.66
+ 33     hamburger             2.54,          name  Calories (kcal)
+ 36     hotdog             2.47
+ 28   pancakes             2.27
+ 37       taco             2.26
+ 44  ice cream             2.22
+ 30       beef             2.17
+ 24   chestnut             1.96
+ 31    chicken             1.84
+ 38    burrito             1.80,             name  Calories (kcal)
+ 15       avocado             1.60
+ 42     spaghetti             1.57
+ 50  custard flan             1.45
+ 54          sake             1.34
+ 41          rice             1.30
+ 19          corn             0.96
+ 17        potato             0.90
+ 5         banana             0.89,            name  Calories (kcal)
+ 56     red wine             0.85
+ 55    champagne             0.84
+ 0        grapes             0.69
+ 52         milk             0.64
+ 7     red apple             0.63
+ 11     cherries             0.63
+ 13    kiwifruit             0.61
+ 8   green apple             0.58,           name  Calories (kcal)
+ 9         pear             0.57
+ 3    tangerine             0.53
+ 6    pineapple             0.50
+ 57        beer             0.43
+ 18      carrot             0.41
+ 20  hot pepper             0.40
+ 10       peach             0.39
+ 12  strawberry             0.32,           name  Calories (kcal)
+ 2   watermelon             0.30
+ 4        lemon             0.29
+ 1        melon             0.28
+ 16    eggplant             0.25
+ 22    mushroom             0.22
+ 14      tomato             0.18
+ 21    cucumber             0.15
+ 53   black tea             0.01]
