@@ -14,11 +14,16 @@ window.initMap = function(){
         { label: "F", name: "Five Guys", lat: 33.7567961, lng: -117.9408495 },
       ];  
 
+    const bounds = new google.maps.LatLngBounds();
+
     burgers.forEach(({label,lat,lng})=>{
-        new google.maps.Marker({
+       const marker =  new google.maps.Marker({
             position: {lat, lng},
             label,
             map
         })
+        bounds.extend(marker.position)
     })
+
+    map.fitBounds(bounds)
 };
