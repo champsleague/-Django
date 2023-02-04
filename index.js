@@ -26,6 +26,9 @@ window.initMap = function(){
         bounds.extend(marker.position);
 
         marker.addListener("click",()=>{
+            // changes position when clicked
+            map.panTo(marker.position)
+            
             infoWindow.setContent(name);
             infoWindow.open({
                 anchor: marker,
