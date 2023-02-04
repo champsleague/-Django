@@ -15,14 +15,23 @@ window.initMap = function(){
       ];  
 
     const bounds = new google.maps.LatLngBounds();
+    const infoWindow = new google.maps.InfoWindow();
 
-    burgers.forEach(({label,lat,lng})=>{
+    burgers.forEach(({label,name, lat,lng})=>{
        const marker =  new google.maps.Marker({
             position: {lat, lng},
             label,
             map
         })
-        bounds.extend(marker.position)
+        bounds.extend(marker.position);
+
+        marker.addListener("click",()=>{
+            infoWindow.setContent(name);
+            infoWindow.open({
+                anchor: marker,
+                map
+            })
+        })
     })
 
     map.fitBounds(bounds)
