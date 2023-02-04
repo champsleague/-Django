@@ -1,7 +1,7 @@
 window.initMap = function(){
     const map = new google.maps.Map(document.getElementById("map"),{
         center: { lat: 37.1926035, lng: -123.8100657},
-        zoom: 5
+        zoom: 10
     });
 
 
@@ -14,9 +14,11 @@ window.initMap = function(){
         { label: "F", name: "Five Guys", lat: 33.691781, lng: -118.5167313 },
       ];  
 
-    new google.maps.Marker({
-        position: {lat:33.696049, lng:-117.8588907},
-        label: "PeopleSpace",
-        map: map
+    burgers.forEach(({label,lat,lng})=>{
+        new google.maps.Marker({
+            position: {lat, lng},
+            label,
+            map
+        })
     })
 };
