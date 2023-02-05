@@ -1,7 +1,7 @@
 7 integers according to the calories
 
 [ 
-# angry                                              name  Calories (kcal)
+# angry (int 1)                                       name  Calories (kcal)
  32          bacon             8.98
  23        peanuts             5.67
  48  chocolate bar             5.18
@@ -13,7 +13,7 @@
  49          candy             3.94,   
 
  
-# sad                                                name  Calories (kcal)
+# sad  (int 2)                                        name  Calories (kcal)
  29        cheese             3.93
  47          cake             3.71
  34  french fries             3.12
@@ -25,7 +25,7 @@
  33     hamburger             2.54,  
 
 
-# neutral                                           name  Calories (kcal)
+# neutral (int 3)                                    name  Calories (kcal)
  36     hotdog             2.47
  28   pancakes             2.27
  37       taco             2.26
@@ -36,7 +36,7 @@
  38    burrito             1.80,    
 
 
-# happy                                             name  Calories (kcal)
+# happy (int 4)                                      name  Calories (kcal)
  15       avocado             1.60
  42     spaghetti             1.57
  50  custard flan             1.45
@@ -47,7 +47,7 @@
  5         banana             0.89,   
 
 
-# disgust                                           name  Calories (kcal)
+# disgust (int 5)                                   name  Calories (kcal)
  56     red wine             0.85
  55    champagne             0.84
  0        grapes             0.69
@@ -58,7 +58,7 @@
  8   green apple             0.58,  
 
 
-# surprise                                          name  Calories (kcal)
+# surprise (int 6)                                  name  Calories (kcal)
  9         pear             0.57
  3    tangerine             0.53
  6    pineapple             0.50
@@ -67,9 +67,9 @@
  20  hot pepper             0.40
  10       peach             0.39
  12  strawberry             0.32,    
- 
 
-# fear                                              name  Calories (kcal)
+
+# fear    (int 7)                                  name  Calories (kcal)
  2   watermelon             0.30
  4        lemon             0.29
  1        melon             0.28
