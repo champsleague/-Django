@@ -69,7 +69,7 @@
  12  strawberry             0.32,    
 
 
-# fear    (int 7)                                  name  Calories (kcal)
+# fear    (int 7)                                      name  Calories (kcal)
  2   watermelon             0.30
  4        lemon             0.29
  1        melon             0.28
