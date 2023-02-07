@@ -1,9 +1,8 @@
 window.initMap = function(){
     const map = new google.maps.Map(document.getElementById("map"),{
         center: { lat: 33.6862268, lng: -118.0439997},
-        zoom: 12
+        zoom: 10
     });
-
 
     const angry = [
         { label: "bacon", name: "Jack in the Box", lat: 33.7269096, lng: -118.0679232 },
